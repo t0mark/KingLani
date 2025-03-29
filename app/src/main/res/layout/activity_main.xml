@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- 킥보드 상태 아이콘 -->
+    <ImageView
+        android:id="@+id/iv_scooter_status"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_scooter"
+        app:tint="#808080"
+        android:layout_marginTop="60dp"/>
+
+    <!-- TODO: 대여/반납으로 버튼 바꾸기 -->
+    <!-- NFC 태그 인식 버튼 -->
+    <Button
+        android:id="@+id/btn_nfc_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingHorizontal="20dp"
+        android:text="대여하기" />
+
+    <!-- TODO: 주차 구역인지 아닌지 판별 Text로 변경 -->
+    <!-- GPS 정보 표시 -->
+    <TextView
+        android:id="@+id/tv_gps_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS 정보: 알 수 없음"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>
