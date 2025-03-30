@@ -17,19 +17,25 @@
         android:layout_height="100dp"
         android:src="@drawable/ic_scooter"
         app:tint="#808080"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="16dp"/>
 
-    <!-- TODO: 대여/반납으로 버튼 바꾸기 -->
     <!-- NFC 태그 인식 버튼 -->
     <Button
         android:id="@+id/btn_nfc_scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:paddingHorizontal="20dp"
         android:text="대여하기" />
 
-    <!-- TODO: 주차 구역인지 아닌지 판별 Text로 변경 -->
+    <!-- 지도 뷰 추가 (높이 조정) -->
+    <com.kakao.vectormap.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+
     <!-- GPS 정보 표시 -->
     <TextView
         android:id="@+id/tv_gps_info"
@@ -37,6 +43,6 @@
         android:layout_height="wrap_content"
         android:text="GPS 정보: 알 수 없음"
         android:textSize="16sp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>

@@ -42,7 +42,10 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // Google Play Services Location 추가
+    // Kakao Maps SDK 추가
+    implementation("com.kakao.maps.open:android:2.12.8")
+
+    // Location 서비스 관련 의존성
     implementation("com.google.android.gms:play-services-location:21.0.1")
 
     testImplementation(libs.junit)
