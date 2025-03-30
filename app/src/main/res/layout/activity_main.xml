@@ -1,48 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:padding="16dp"
     tools:context=".MainActivity">
 
     <!-- 킥보드 상태 아이콘 -->
     <ImageView
         android:id="@+id/iv_scooter_status"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ic_scooter"
         app:tint="#808080"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- NFC 태그 인식 버튼 -->
     <Button
         android:id="@+id/btn_nfc_scan"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:text="대여하기" />
+        android:layout_marginTop="8dp"
+        android:text="대여하기"
+        android:paddingVertical="12dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_scooter_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
 
-    <!-- 지도 뷰 추가 (높이 조정) -->
+    <!-- 지도 뷰 (화면 비율에 맞게 조정) -->
     <com.kakao.vectormap.MapView
         android:id="@+id/map_view"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp" />
-
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_nfc_scan"
+        app:layout_constraintBottom_toTopOf="@id/tv_gps_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- GPS 정보 표시 -->
     <TextView
         android:id="@+id/tv_gps_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GPS 정보: 알 수 없음"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"/>
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
